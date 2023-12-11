@@ -6,8 +6,8 @@ STANDARDS = -pedantic -pedantic-errors
 PROGRAM_NAME = program.exe
 TESTER_NAME = tests.exe
 
-PROGRAM_FILES = #{CPPFileName}.cpp
-TEST_FILES = #{CPPFileName}Tests.cpp
+PROGRAM_FILES = main.cpp
+TEST_FILES = tests.cpp
 INCLUDE_DIRS = .
 SHARED_FILES = 
 

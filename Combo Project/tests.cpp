@@ -1,8 +1,3 @@
-/**
- * @author #{Author}
- * @brief Unit tests for #{CPPFileName}
- */
-
 //-----------------------------------------------------------------------------------
 // Bring in unit testing code and tell it to build a main function
 // If you have multiple unit test files, only one should have this line

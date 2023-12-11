@@ -5,7 +5,7 @@ WARNINGS = -Wall -Wextra -Wmissing-include-dirs -Wfloat-equal -Wredundant-decls 
 STANDARDS = -pedantic -pedantic-errors
 PROGRAM_NAME = program.exe
 
-PROGRAM_FILES = #{CPPFileName}.cpp
+PROGRAM_FILES = main.cpp
 INCLUDE_DIRS = .
 SHARED_FILES = 
 

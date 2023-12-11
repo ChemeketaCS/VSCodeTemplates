@@ -5,7 +5,7 @@ WARNINGS = -Wall -Wextra -Wmissing-include-dirs -Wfloat-equal -Wredundant-decls 
 STANDARDS = -pedantic -pedantic-errors
 TESTER_NAME = tests.exe
 
-TEST_FILES = #{CPPFileName}.cpp
+TEST_FILES = tests.cpp
 INCLUDE_DIRS = .
 SHARED_FILES = 
 

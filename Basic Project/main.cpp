@@ -1,8 +1,3 @@
-/**
- * @author #{Author}
- * @brief #{CPPFileName}
- */
-
 #include <iostream>
 
 using namespace std;
