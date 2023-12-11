@@ -9,12 +9,13 @@ jobs:
         git init BasicProject
         git init ComboProject
         git init UnitTestProject
+        touch 
     - name: Archive Release
       uses: thedoctor0/zip-release@0.7.5
       with:
         type: 'zip'
         filename: 'ProjectTemplates.zip'
-        exclusions: '*.git*'
+        exclusions: '.git*'
     - name: Generate release tag
       id: generate_release_tag
       uses: alexvingg/next-release-tag@v1.0.4
