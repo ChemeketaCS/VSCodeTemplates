@@ -5,6 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
+    - run: |
+        git init BasicProject
+        git init ComboProject
+        git init UnitTestProject
     - name: Archive Release
       uses: thedoctor0/zip-release@0.7.5
       with:
