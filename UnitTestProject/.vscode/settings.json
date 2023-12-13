@@ -8,5 +8,6 @@
     "gitdoc.enabled": true,
     "gitdoc.filePattern": "{**/*.h,**/*.cpp}",
     "gitdoc.pullOnOpen": false,
-    "gitdoc.autoCommitDelay": 10000
+    "gitdoc.autoCommitDelay": 10000,
+    "editor.formatOnSave": true
 }
