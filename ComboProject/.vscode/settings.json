@@ -9,5 +9,6 @@
     "gitdoc.filePattern": "{**/*.h,**/*.cpp}",
     "gitdoc.pullOnOpen": false,
     "gitdoc.autoCommitDelay": 10000,
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "debug.onTaskErrors": "showErrors",
 }
