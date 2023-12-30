@@ -6,9 +6,9 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - run: |
-        git init BasicProject
-        git init ComboProject
-        git init UnitTestProject
+        mv BasicProject/dotgit BasicProject/.git
+        mv ComboProject/dotgit ComboProject/.git
+        mv UnitTestProject/dotgit UnitTestProject/.git
         rm -rf .git
         rm -rf .github
     - name: Archive Release
