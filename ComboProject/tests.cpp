@@ -1,28 +1,28 @@
-//-----------------------------------------------------------------------------------
-// Bring in unit testing code and tell it to build a main function
-// If you have multiple unit test files, only one should have this line
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-
 #include "doctest.h"
 
-// Use Approx from doctest without saying doctest::Approx
 using doctest::Approx;
-//-----------------------------------------------------------------------------------
 
-// Sample functions
-int squareDifference(int a, int b) {
+int squareDifference(int a, int b)
+{
   return (a - b) * (a - b);
 }
 
-double distance(int x1, int y1, int x2, int y2) {
+double distance(int x1, int y1, int x2, int y2)
+{
   return sqrt(squareDifference(x1, x2) + squareDifference(y1, y2));
 }
 
-// Tests
-TEST_CASE("squareDifference") {
-
-  // CHECK means keep running this TEST_CASE even if failed.
+TEST_CASE("squareDifference")
+{
+  // if a CHECK fails, the test case as a whole will fail, but still
+  // try the rest of the assertions.
   CHECK(squareDifference(1, 4) == 9);
+
+  // if a REQUIRE fails, the rest of the assertions in this
+  // test case aren't even worth trying---just move on to the next
+  // test case.
+  REQUIRE(squareDifference(1, 4) == 9);
 
   // Test that ordering does not matter
   CHECK(squareDifference(4, 1) == 9);
@@ -30,24 +30,17 @@ TEST_CASE("squareDifference") {
   // Test that negatives are handled
   int answer3 = squareDifference(-2, -6);
   CHECK(answer3 == 16);
-
-  // Check that x is 5. REQUIRE means stop running this TEST_CASE if failed
-  //   and move on to the next TEST_CASE
-  // Use it in situations where there is no point in trying rest of tests if
-  //   this step fails.
-  // REQUIRE( squareDifference(-2, -6) == 16 );
 }
 
-TEST_CASE("distance") {
+TEST_CASE("distance")
+{
   int x1 = 0, y1 = 0;
   int x2 = 3, y2 = 4;
   int x3 = -2, y3 = -2;
 
   // Approx sees if a double value is "close enough" to believe that any
-  // difference
-  //  is based on rounding error.
-  // Always tests doubles using Approx.
-  // It only exists in unit tests - do not use in normal code.
+  // difference is based on rounding error.  Always test doubles using
+  // Approx.  It only exists in unit tests---do not use in normal code.
   CHECK(distance(x1, y1, x2, y2) == Approx(5.0));
 
   // Check reverse direction
