@@ -6,9 +6,14 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - run: |
-        mv BasicProject/dotgit BasicProject/.git
-        mv ComboProject/dotgit ComboProject/.git
-        mv UnitTestProject/dotgit UnitTestProject/.git
+        for d in BasicProject ComboProject UnitTestProject
+        do
+          pushd $d
+          git init
+          git add -A
+          git commit -m "Initial template project"
+          popd
+        done
         rm -rf .git
         rm -rf .github
     - name: Archive Release
