@@ -6,6 +6,8 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - run: |
+        git config --global user.email "noone@chemeketa.edu"
+        git config --global user.name "ChemeketaCS"
         for d in BasicProject ComboProject UnitTestProject
         do
           pushd $d
