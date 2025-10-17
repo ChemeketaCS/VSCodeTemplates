@@ -1,2 +1,4 @@
 *.exe
+*.o
+*.zip
 gcm.cache/
