@@ -15,7 +15,7 @@ all: program.exe
 
 .PHONY: program.exe # Always force rebuild of program
 program.exe: $(PROGRAM_FILES) $(SHARED_FILES) $(HEADERS)
-	$(CXX) $(CXXFLAGS) $(PROGRAM_FILES) $(SHARED_FILES) -o $@
+	$(CXX) $(CXXFLAGS) $(SHARED_FILES) $(PROGRAM_FILES) -o $@
 
 .PHONY: clean
 clean:
